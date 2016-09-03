@@ -5,21 +5,36 @@
   <title>Nathan's Portfolio</title>
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/modules.css">
+  <link rel="stylesheet" href="styles/icons.css">
 </head>
 <body>
-  <main>
-    <header>
+    <header class="site-header">
       <h1>Nathan Pickard's Portfolio</h1>
     </header>
-    <nav>
+    <nav class="main-nav">
       <ul>
-        <li>Articles</li>
-        <li>About</li>
-        <li><a href="https://twitter.com/NathanPickard87" target="_blank">Twitter</a></li>
-        <li><a href="https://github.com/NathanPickard" target="_blank">GitHub</a></li>
+        <li class="tab" data-content="articles"><i class-"icon-home"></i><a href="#"> Home</a></li>
+        <li class="tab" data-content="about"><i class="icon-address-book"></i><a href="#"> About</a></li>
+        <li><i class="icon-twitter3"></i><a href="https://twitter.com/NathanPickard87" target="_blank"> Twitter</a></li>
+        <li><i class="icon-github"></i><a href="https://github.com/NathanPickard" target="_blank"> GitHub</a></li>
       </ul>
     </nav>
-    <section id="articles">
+    <main>
+    <section id="articles" class="tab-content">
+      <div>
+        <ul id="filters">
+          <li>
+            <select id="author-filter">
+              <option value="">-- Filter by Authors --</option>
+            </select>
+          </li>
+          <li>
+            <select id="category-filter">
+              <option value="">-- Filter by Categories --</option>
+            </select>
+          </li>
+        </ul>
+      </div>
       <article class="template" data-category="cat">
         <header>
           <h1>Title</h1>
@@ -29,11 +44,23 @@
           </div>
         </header>
         <section class="article-body"></section>
+        <a href="#" class="read-on">Read on &rarr;</a>
       </article>
     </section>
-  </div>
+    <section id="about" class="tab-content">
+      <header>Welcome to my Portfolio</header>
+    <section>
+      <h1>Some of my interests:</h1>
+      <ul>
+        <li>Coding</li>
+        <li>Music</li>
+        <li>The Great Outdoors</li>
+      </ul>
+    </section>
+  </section>
 </main>
 <footer>
+  &copy; 2016 Nathan Pickard | Portfolio
 </footer>
 
 <script
@@ -42,6 +69,6 @@
 			  crossorigin="anonymous"></script>
 <script src="scripts/blogArticles.js"></script>
 <script src="scripts/article.js"></script>
-
+<script src="scripts/articleView.js"></script>
 </body>
 <html>
