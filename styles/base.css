@@ -1,7 +1,12 @@
+#siteTitle {
+  margin-left: 25px;
+}
+
 body {
   line-height: 1.5;
   font-size: 100%;
   padding: 1em;
+  background-color: azure;
 }
 
 hr {
@@ -31,5 +36,5 @@ a:hover, a:focus {
 }
 
 a:visited {
-  
+
 }
