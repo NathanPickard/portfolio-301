@@ -1,6 +1,25 @@
+#siteTitle {
+  margin-left: 25px;
+}
+
 body {
+  line-height: 1.5;
+  font-size: 100%;
   padding: 1em;
-  font-style: italic;
+  background-color: azure;
+}
+
+hr {
+  margin: 1em;
+  width: 80%;
+}
+
+p {
+  font-size: 1em;
+}
+
+address {
+  display: inline-block;
 }
 
 main {
@@ -8,11 +27,14 @@ main {
   width: 80%;
 }
 
-address {
-  display: inline-block;
+a, a:link, a:active {
+  color: #777;
 }
 
-hr {
-  margin: 1em;
-  width: 80%;
+a:hover, a:focus {
+
+}
+
+a:visited {
+
 }
