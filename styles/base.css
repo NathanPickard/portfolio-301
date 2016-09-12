@@ -15,6 +15,7 @@ body {
 }
 
 hr {
+  clear: both;
   margin: 1em;
   width: 80%;
 }
@@ -33,7 +34,9 @@ main {
 }
 
 a, a:link, a:active {
-  color: #777;
+  text-decoration: none;
+  /*color: #777;*/
+  color: white;
 }
 
 a:hover, a:focus {
