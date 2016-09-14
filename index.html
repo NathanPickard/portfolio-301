@@ -9,9 +9,25 @@
   <link rel="stylesheet" href="styles.layout.css">
   <link rel="stylesheet" href="styles/modules.css">
 
+<!-- Handlebars template script -->
   <script id="templateScript" type="text/x-handlebars-template">
     <article data-category="{{category}}" data-project="{{project}}">
+      <header>
+        <h1>{{title}}</h1>
+        <div class="byline">
+          By <address><a href="{{authorUrl}}">{{{author}}}</a></address>
+          published <time pubdate datetime="2000-01-01">{{{publishedOn}}}
+          </time>
+        </div>
+      </header>
+      <section class="article-body">{{{body}}}</section>
+      <a href="#" class="read-on">Read on &rarr;</a>
+      <hr>
+    </article>
+  </script>
+
 </head>
+
 <body>
     <header class="site-header clearfix">
       <section class="heading-group-h1">
@@ -45,17 +61,7 @@
           </li>
         </ul>
       </div>
-      <article class="template template" data-category="cat">
-        <header>
-          <h1>Title</h1>
-          <div class="byline">
-            By <address><a href="">Author Name</a></address>
-            published <time pubdate="" datetime="2000-01-01">Publish Time</time>
-          </div>
-        </header>
-        <section class="article-body"></section>
-        <a href="#" class="read-on">Read on &rarr;</a>
-      </article>
+
     </section>
     <section id="about" class="tab-content">
       <header>Welcome to my Portfolio</header>
@@ -68,6 +74,9 @@
       </ul>
     </section>
   </section>
+
+  <div class="app"></div>
+
 </main>
 <footer>
   &copy; 2016 Nathan Pickard | Portfolio
@@ -77,8 +86,11 @@
 			  src="https://code.jquery.com/jquery-3.1.0.js"
 			  integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
 			  crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js">
+        </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"
 <script src="scripts/projectArticles.js"></script>
-<script src="scripts/article.js"></script>
+<script src="scripts/project.js"></script>
 <script src="scripts/articleView.js"></script>
 </body>
 </html>
