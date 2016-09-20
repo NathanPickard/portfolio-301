@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/icons.css">
   <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles.layout.css">
+  <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
 
 <!-- Handlebars template script -->
@@ -15,17 +15,16 @@
       <header>
         <h1>{{title}}</h1>
         <div class="byline">
-          By <address><a href="{{authorUrl}}">{{{author}}}</a></address>
+          By <address><a href="{{authorUrl}}">{{{project}}}</a></address>
           published <time pubdate datetime="2000-01-01">{{{publishedOn}}}
           </time>
         </div>
       </header>
-      <section class="article-body">{{{body}}}</section>
+      <section class="project-body">{{{body}}}</section>
       <a href="#" class="read-on">Read on &rarr;</a>
       <hr>
     </article>
   </script>
-
 </head>
 
 <body>
@@ -61,7 +60,6 @@
           </li>
         </ul>
       </div>
-
     </section>
     <section id="about" class="tab-content">
       <header>Welcome to my Portfolio</header>
@@ -86,11 +84,9 @@
 			  src="https://code.jquery.com/jquery-3.1.0.js"
 			  integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
 			  crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js">
-        </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 <script src="scripts/projectArticles.js"></script>
 <script src="scripts/project.js"></script>
-<script src="scripts/articleView.js"></script>
+<script src="scripts/projectView.js"></script>
 </body>
 </html>
