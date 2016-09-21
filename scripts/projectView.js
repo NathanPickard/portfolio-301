@@ -22,7 +22,7 @@ projectView.handleProjectFilter = function() {
       $('article[data-project="' + $(this).val() + '"]').fadeIn();
     } else {
       $('article').fadeIn();
-      $('article.template').hide();
+      $('project.template').hide();
     }
     $('#category-filter').val('');
   });
@@ -35,7 +35,7 @@ projectView.handleCategoryFilter = function() {
       $('article[data-category="' + $(this).val() + '"]').fadeIn();
     } else {
       $('article').fadeIn();
-      $('article.template').hide();
+      $('project.template').hide();
     }
     $('#project-filter').val('');
   });
@@ -51,9 +51,9 @@ projectView.handleMainNav = function() {
 };
 
 projectView.setTeasers = function() {
-  $('.article-body *:nth-of-type(n+2)').hide();
+  $('.project-body *:nth-of-type(n+2)').hide();
 
-  $('#articles').on('click', 'a.read-on', function(e) {
+  $('#projects').on('click', 'a.read-on', function(e) {
     e.preventDefault();
     $(this).parent().find('*').fadeIn();
     $(this).hide();

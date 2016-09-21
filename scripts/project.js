@@ -1,22 +1,24 @@
-var articles = [];
+var projects = [];
 
-function Article (opts) {
+function Project (opts) {
   this.title = opts.title;
   this.category = opts.category;
-  this.author = opts.author;
+  this.project = opts.project;
   this.authorUrl = opts.authorUrl;
   this.publishedOn = opts.publishedOn;
   this.body = opts.body;
 }
 
-Article.prototype.toHtml = function() {
+Project.prototype.toHtml = function() {
   var appTemplate = $('#templateScript').html();
-  var comiledTemplate = Handlebars.compile(appTemplate);
+  console.log(appTemplate);
+  var compiledTemplate = Handlebars.compile(appTemplate);
+  console.log(compiledTemplate);
 
   this.daysAgo = parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000);
   this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
 
-  return comiledTemplate(this);
+  return compiledTemplate(this);
 };
 
 rawData.sort(function(a,b) {
@@ -24,9 +26,9 @@ rawData.sort(function(a,b) {
 });
 
 rawData.forEach(function(ele) {
-  articles.push(new Article(ele));
+  projects.push(new Project(ele));
 });
 
-articles.forEach(function(a) {
-  $('#articles').append(a.toHtml());
+projects.forEach(function(a) {
+  $('#projects').append(a.toHtml());
 });
