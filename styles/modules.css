@@ -36,6 +36,10 @@
   padding: .5em .2em;
 }
 
+.read-on {
+  color: cadetblue;
+}
+
 #filters {
   padding: 0;
   list-style: none;
