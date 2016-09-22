@@ -60,10 +60,47 @@ projectView.setTeasers = function() {
   });
 };
 
-$(document).ready(function() {
+projectView.initNewArticlePage = function() {
+  $('.tab-content').show();
+  $('#export-field').hide();
+  $('#project-json').on('focus', function() {
+    this.select();
+  });
+
+  $('#new-form').on('change', 'input, textarea', projectView.create);
+};
+
+projectView.create = function() {
+  var article;
+  $('#projects').empty();
+
+  project = new Project({
+    title: $('#project-title').val(),
+    category: $('#project-category').val(),
+    project: $('#project-project').val(),
+    authorUrl: $('#project-author-url').val(),
+    publishedOn: $('#project-published:checked').length ? util.today() : null
+    body: $('#project-body').val()
+  });
+
+  $('#projects').append(article.toHtml());
+
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block);
+  });
+
+  $('#export-field').show();
+  $('#project-json').val(JSON.stringify(project) + ',');
+};
+
+projectView.initIndexPage = function() {
+  Project.all.forEach(function(a) {
+    $('#projects').append(a.toHtml())
+  });
+
   projectView.populateFilters();
   projectView.handleCategoryFilter();
   projectView.handleProjectFilter();
   projectView.handleMainNav();
   projectView.setTeasers();
-});
+};
