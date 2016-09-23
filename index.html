@@ -11,11 +11,11 @@
 
 <!-- Handlebars template script -->
   <script id="templateScript" type="text/x-handlebars-template">
-    <article data-category="{{category}}" data-project="{{project}}">
+    <article data-category="{{category}}" data-project="{{projectType}}" data-language="{{language}}">
       <header>
         <h1>{{title}}</h1>
         <div class="byline">
-          By <address><a href="{{authorUrl}}">{{{project}}}</a></address>
+          <address><a href="{{authorUrl}}">{{{projectType}}}</a></address>
           published <time pubdate datetime="2000-01-01">{{{publishedOn}}}
           </time>
         </div>
@@ -55,7 +55,12 @@
           </li>
           <li>
             <select id="category-filter">
-              <option value="">-- Filter by Categories --</option>
+              <option value="">-- Filter by Category --</option>
+            </select>
+          </li>
+          <li>
+            <select id="language-filter">
+              <option value="">-- Filter by Language --</option>
             </select>
           </li>
         </ul>
@@ -88,5 +93,6 @@
 <script src="scripts/projectArticles.js"></script>
 <script src="scripts/project.js"></script>
 <script src="scripts/projectView.js"></script>
+<script>  Project.fetchAll();  </script>
 </body>
 </html>

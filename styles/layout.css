@@ -16,6 +16,18 @@
   max-width: 80%;
 }
 
+article {
+  background-color: lightblue;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 7px;
+}
+
+#filters {
+  background-color: cadetblue;
+  display: inline-block;
+}
+
 #filters select {
   width: 90%;
   margin: 0.2em 5%;

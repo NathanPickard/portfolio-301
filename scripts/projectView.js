@@ -6,12 +6,16 @@ projectView.populateFilters = function() {
       var val = $(this).find('address a').text();
         var optionTag = '<option value"' + val + '">' + val + '</option>';
         $('#project-filter').append(optionTag);
+
         val = $(this).attr('data-category');
         optionTag = '<option value="' + val + '">' + val + '</option>';
         if ($('#category-filter option[value="' + val + '"]').length === 0) {
           $('#category-filter').append(optionTag);
         }
-    }
+        if ($('#language-filter option[value="' + val + '"]').length === 0) {
+          $('#language-filter').append(optionTag);
+        }
+      }
   });
 };
 
@@ -38,6 +42,19 @@ projectView.handleCategoryFilter = function() {
       $('project.template').hide();
     }
     $('#project-filter').val('');
+  });
+};
+
+projectView.handleLanguageFilter = function() {
+  $('#language-filter').on('change', function() {
+    if ($(this).val()) {
+      $('article').hide();
+      $('article[data-language="' + $(this).val() + '"]').fadeIn();
+    } else {
+      $('article').fadeIn();
+      $('project.template').hide();
+    }
+    $('#language-filter').val('');
   });
 };
 
@@ -79,8 +96,8 @@ projectView.create = function() {
     category: $('#project-category').val(),
     project: $('#project-project').val(),
     authorUrl: $('#project-author-url').val(),
+    body: $('#project-body').val(),
     publishedOn: $('#project-published:checked').length ? util.today() : null
-    body: $('#project-body').val()
   });
 
   $('#projects').append(article.toHtml());
@@ -101,6 +118,7 @@ projectView.initIndexPage = function() {
   projectView.populateFilters();
   projectView.handleCategoryFilter();
   projectView.handleProjectFilter();
+  projectView.handleLanguageFilter();
   projectView.handleMainNav();
   projectView.setTeasers();
 };

@@ -1,18 +1,20 @@
 [
   {
     "title": "First Project!",
-    "category": "Class-01",
-    "project": "Nathan Pickard",
+    "category": "JavaScript",
+    "language": "JavaScript",
+    "projectType": "Web application",
     "authorUrl": "https://nathanpickard.squarespace.com",
     "publishedOn": "08-30-2016",
-    "body": "## This is my first project for my portfolio"
+    "body": "This is my first project for my portfolio"
   },
   {
     "title": "Second Project will go here!",
-    "category": "Class-02",
-    "project": "Nathan Pickard",
+    "category": "Java",
+    "language": "Java",
+    "projectType": "Android application",
     "authorUrl": "https://nathanpickard.squarespace.com",
     "publishedOn": "09-05-2016",
-    "body": "## This is my first project for my portfolio"
+    "body": "This is my first project for my portfolio"
   }
 ]
