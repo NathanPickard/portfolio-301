@@ -54,7 +54,7 @@ projectView.handleLanguageFilter = function() {
       $('article').fadeIn();
       $('project.template').hide();
     }
-    $('#language-filter').val('');
+    $('#project-filter').val('');
   });
 };
 

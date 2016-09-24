@@ -1,8 +1,8 @@
 [
   {
     "title": "First Project!",
-    "category": "JavaScript",
-    "language": "JavaScript",
+    "category": "Web",
+    "projectLanguage": "JavaScript",
     "projectType": "Web application",
     "authorUrl": "https://nathanpickard.squarespace.com",
     "publishedOn": "08-30-2016",
@@ -10,8 +10,8 @@
   },
   {
     "title": "Second Project will go here!",
-    "category": "Java",
-    "language": "Java",
+    "category": "Mobile",
+    "projectLanguage": "Java",
     "projectType": "Android application",
     "authorUrl": "https://nathanpickard.squarespace.com",
     "publishedOn": "09-05-2016",

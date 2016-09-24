@@ -4,7 +4,7 @@ function Project (opts) {
   this.title = opts.title;
   this.category = opts.category;
   this.projectType = opts.projectType;
-  this.language = opts.language;
+  this.projectLanguage = opts.projectLanguage;
   this.authorUrl = opts.authorUrl;
   this.publishedOn = opts.publishedOn;
   this.body = opts.body;
