@@ -1,3 +1,5 @@
+(function(module) {
+  
 var projectView = {};
 
 projectView.populateFilters = function() {
@@ -122,3 +124,6 @@ projectView.initIndexPage = function() {
   projectView.handleMainNav();
   projectView.setTeasers();
 };
+
+  module.projectView = projectView;
+})(window);
