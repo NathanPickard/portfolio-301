@@ -1,20 +1,32 @@
 [
   {
-    "title": "First Project!",
+    "title": "Weekend Brunch Finder",
     "category": "Web",
     "projectLanguage": "JavaScript",
     "projectType": "Web application",
+    "projectUrl": "https://gnkatchmar.github.io/Code201Final/",
     "authorUrl": "https://nathanpickard.squarespace.com",
     "publishedOn": "08-30-2016",
     "body": "This is my first project for my portfolio"
   },
   {
-    "title": "Second Project will go here!",
+    "title": "PDX Weather",
     "category": "Mobile",
     "projectLanguage": "Java",
     "projectType": "Android application",
+    "projectUrl": "https://play.google.com/store/apps/details?id=apps.nathanpickard.PDXWeather&hl=en",
     "authorUrl": "https://nathanpickard.squarespace.com",
     "publishedOn": "09-05-2016",
-    "body": "This is my first project for my portfolio"
+    "body": "This is my second project for my portfolio"
+  },
+  {
+    "title": "B-Ball Counter",
+    "category": "Mobile",
+    "projectLanguage": "Java",
+    "projectType": "Android application",
+    "projectUrl": "https://play.google.com/store/apps/details?id=apps.nathanpickard.courtcounter&hl=en",
+    "authorUrl": "https://nathanpickard.squarespace.com",
+    "publishedOn": "09-05-2016",
+    "body": "This is my third project for my portfolio"
   }
 ]

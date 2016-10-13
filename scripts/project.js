@@ -5,6 +5,7 @@ function Project (opts) {
   this.category = opts.category;
   this.projectType = opts.projectType;
   this.projectLanguage = opts.projectLanguage;
+  this.projectUrl = opts.projectUrl;
   this.authorUrl = opts.authorUrl;
   this.publishedOn = opts.publishedOn;
   this.body = opts.body;
@@ -33,16 +34,16 @@ Project.loadAll = function(rawData) {
 };
 
 Project.fetchAll = function(callback) {
-  if (localStorage.rawData) {
-    Project.loadAll(JSON.parse(localStorage.rawData));
-    callback();
-  } else {
+  // if (localStorage.rawData) {
+  //   Project.loadAll(JSON.parse(localStorage.rawData));
+  //   callback();
+  // } else {
     $.getJSON('./data/projectArticles.json', function(rawData) {
       Project.loadAll(rawData);
       localStorage.rawData = JSON.stringify(rawData);
       callback();
     });
-  }
+  // }
 };
 
 

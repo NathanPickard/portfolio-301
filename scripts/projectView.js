@@ -1,5 +1,5 @@
 (function(module) {
-  
+
 var projectView = {};
 
 projectView.populateFilters = function() {
@@ -97,6 +97,7 @@ projectView.create = function() {
     title: $('#project-title').val(),
     category: $('#project-category').val(),
     project: $('#project-project').val(),
+    // projectUrl: $('#project-url').val(),
     authorUrl: $('#project-author-url').val(),
     body: $('#project-body').val(),
     publishedOn: $('#project-published:checked').length ? util.today() : null
